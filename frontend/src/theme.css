@@ -1,0 +1,283 @@
+:root {
+  --verde: #1d4a3f;
+  --verde-oscuro: #12322b;
+  --verde-rgb: 29, 74, 63;
+  --acento: #d89b2b;
+  --acento-rgb: 216, 155, 43;
+  --hueso: #f7f4ec;
+  --huerca: #efece1;
+
+  --bs-primary: var(--verde);
+  --bs-primary-rgb: var(--verde-rgb);
+  --bs-primary-bg-subtle: #e4eee9;
+  --bs-primary-border-subtle: #b9d0c6;
+  --bs-primary-text-emphasis: var(--verde-oscuro);
+  --bs-link-color: var(--verde);
+  --bs-link-color-rgb: var(--verde-rgb);
+  --bs-link-hover-color: #12322b;
+  --bs-link-hover-color-rgb: 18, 50, 43;
+  --bs-body-color: #2c3a36;
+  --bs-body-bg: var(--hueso);
+  --bs-border-radius: 0.75rem;
+  --bs-border-radius-lg: 1rem;
+}
+
+body {
+  min-height: 100vh;
+  background: var(--bs-body-bg);
+  font-family: "Outfit", system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6,
+.navbar-brand,
+.hero-titulo {
+  font-family: "Bricolage Grotesque", "Outfit", system-ui, sans-serif;
+  font-weight: 700;
+}
+
+:focus-visible {
+  outline: 3px solid rgba(var(--acento-rgb), 0.55);
+  outline-offset: 2px;
+}
+
+/* ------------------------------------------------------------------ */
+/* Navbar
+/* ------------------------------------------------------------------ */
+
+.navbar {
+  background-color: var(--verde-oscuro) !important;
+  border-bottom: 3px solid var(--acento);
+}
+
+.navbar .navbar-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 800;
+  letter-spacing: 0.2px;
+  color: #ffffff;
+}
+
+.marca-icono {
+  display: inline-grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, var(--acento), #b07d1b);
+  color: var(--verde-oscuro);
+  font-size: 1.05rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+}
+
+.navbar .nav-link {
+  color: #cfe0d8;
+  border-radius: 999px;
+  padding-inline: 16px;
+  padding-block: 8px;
+  font-weight: 500;
+  transition:
+    color 0.15s ease,
+    background-color 0.15s ease;
+}
+
+.navbar .nav-link:hover {
+  color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.08);
+}
+
+.navbar .nav-link.active {
+  background-color: var(--acento);
+  color: var(--verde-oscuro);
+}
+
+/* ------------------------------------------------------------------ */
+/* Encabezado de pagina (hero band)
+/* ------------------------------------------------------------------ */
+
+.hero-band {
+  background: linear-gradient(135deg, var(--verde-oscuro), var(--verde));
+  color: var(--hueso);
+  border-radius: 1.25rem;
+  padding: 1.75rem 2rem;
+  margin-top: 1.25rem;
+  box-shadow: 0 14px 30px rgba(18, 50, 43, 0.25);
+}
+
+.hero-band .hero-titulo {
+  margin-bottom: 0.25rem;
+  color: #ffffff;
+}
+
+.hero-band .hero-subtitulo {
+  color: #cfe0d8;
+  margin-bottom: 0;
+}
+
+.marca-acento {
+  color: var(--acento);
+}
+
+/* ------------------------------------------------------------------ */
+/* Tarjetas
+/* ------------------------------------------------------------------ */
+
+.card {
+  border: 1px solid var(--huerca) !important;
+  box-shadow: 0 8px 24px rgba(18, 50, 43, 0.06);
+}
+
+.card-header {
+  border-bottom: 1px solid var(--huerca);
+}
+
+.pestana-contenido {
+  animation: aparecer 0.18s ease-out;
+}
+
+@keyframes aparecer {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ------------------------------------------------------------------ */
+/* Tabla de productos
+/* ------------------------------------------------------------------ */
+
+.mini-foto {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  object-fit: cover;
+  background: var(--huerca);
+}
+
+.mini-lugar {
+  display: inline-grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, var(--verde), var(--acento));
+  color: #ffffff;
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-weight: 800;
+  font-size: 1.1rem;
+}
+
+.table > :not(caption) > * > * {
+  padding-block: 0.7rem;
+}
+
+.table thead th {
+  text-transform: uppercase;
+  font-size: 0.74rem;
+  letter-spacing: 0.06em;
+  color: #55706a;
+  border-bottom-width: 1px;
+}
+
+.table tbody tr:hover {
+  background-color: rgba(var(--verde-rgb), 0.045);
+}
+
+/* ------------------------------------------------------------------ */
+/* Formularios
+/* ------------------------------------------------------------------ */
+
+.form-label {
+  font-weight: 600;
+  font-size: 0.85rem;
+  color: #3a4d47;
+}
+
+.form-control:focus,
+.form-select:focus {
+  border-color: rgba(var(--verde-rgb), 0.45);
+  box-shadow: 0 0 0 0.25rem rgba(var(--verde-rgb), 0.12);
+}
+
+.selector-foto {
+  border: 2px dashed #b9c6c0;
+  background: var(--huerca);
+  border-radius: 0.75rem;
+  padding: 1rem;
+  cursor: pointer;
+  transition: border-color 0.15s ease;
+}
+
+.selector-foto:hover {
+  border-color: var(--verde);
+}
+
+.vista-previa {
+  width: 72px;
+  height: 72px;
+  border-radius: 14px;
+  object-fit: cover;
+  box-shadow: 0 4px 12px rgba(18, 50, 43, 0.2);
+}
+
+/* ------------------------------------------------------------------ */
+/* Boton acento
+/* ------------------------------------------------------------------ */
+
+.btn-acento {
+  --bs-btn-bg: var(--acento);
+  --bs-btn-border-color: var(--acento);
+  --bs-btn-color: var(--verde-oscuro);
+  --bs-btn-hover-bg: #c18924;
+  --bs-btn-hover-border-color: #c18924;
+  --bs-btn-hover-color: var(--verde-oscuro);
+  --bs-btn-active-bg: #b07d1b;
+  --bs-btn-active-border-color: #b07d1b;
+  --bs-btn-active-color: var(--verde-oscuro);
+  font-weight: 600;
+}
+
+/* ------------------------------------------------------------------ */
+/* Alerts y badges
+/* ------------------------------------------------------------------ */
+
+.alert {
+  border-radius: 0.75rem;
+}
+
+.estado-badge {
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.tabla-acciones .btn {
+  margin-right: 6px;
+}
+
+/* ------------------------------------------------------------------ */
+/* Pie de pagina
+/* ------------------------------------------------------------------ */
+
+footer {
+  color: #55706a;
+  background-color: var(--huerca) !important;
+  border-top: 1px solid #e0dccd !important;
+}
+
+/* ------------------------------------------------------------------ */
+/* Accesibilidad: respetar reduccion de movimiento
+/* ------------------------------------------------------------------ */
+
+@media (prefers-reduced-motion: reduce) {
+  .pestana-contenido {
+    animation: none;
+  }
+  .navbar .nav-link,
+  .selector-foto {
+    transition: none;
+  }
+}

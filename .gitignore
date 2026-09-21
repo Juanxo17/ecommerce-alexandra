@@ -1,0 +1,26 @@
+# Entorno Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+.pytest_cache/
+
+# Node
+node_modules/
+
+# Archivos temporales / de desarrollo
+capturas/
+*.stackdump
+.vercel/
+.oxlintrc.json
+
+# Entregables y respaldos que no van al repositorio
+POO_Entrega.zip
+Evidencias_Conceptos_POO.original.pdf
+agregar_capturas_pdf.py
+generar_guias_pdf.py
+generar_pdf_diagramas.py
+GUIA_*.md
+Guia_*.pdf
+docs/estudiante/
+docs/verificacion/
