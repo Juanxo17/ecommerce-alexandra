@@ -58,15 +58,13 @@ h1, h2, h3, h4, h5, h6,
   color: #ffffff;
 }
 
-.marca-icono {
-  display: inline-grid;
-  place-items: center;
+.marca-logo {
   width: 34px;
   height: 34px;
   border-radius: 10px;
-  background: linear-gradient(135deg, var(--acento), #b07d1b);
-  color: var(--verde-oscuro);
-  font-size: 1.05rem;
+  object-fit: cover;
+  background: #ffffff;
+  padding: 2px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
 }
 
